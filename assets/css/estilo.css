@@ -1,0 +1,4 @@
+.barra-vermelha { background-color: #c40000; }
+.navbar .nav-link { color: #fff; font-size: 18px; border-radius: 6px; margin-left: 4px; }
+.navbar .nav-link.active { background: #fff; color: #c40000; font-weight: 700; }
+body { background-color: #f3f3f3; }
