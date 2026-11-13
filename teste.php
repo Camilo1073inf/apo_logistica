@@ -1,3 +1,3 @@
 <?php
-echo "hello world";
-?>
+require "config/conexao.php";
+echo "Conectado ao banco com sucesso!";
