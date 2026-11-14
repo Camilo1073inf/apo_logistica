@@ -3,10 +3,8 @@ require "../config/conexao.php";
 $pagina = "transportadores";
 $titulo = "Transportador - Camilo Transportes";
 
-// Valores vazios, para quando for um transportador novo
 $t = ["id" => "", "nome" => "", "cpf_cnpj" => "", "telefone" => "", "cidade" => ""];
 
-// Se veio um id na URL, busca o transportador para editar
 if (isset($_GET["id"])) {
     $stmt = $pdo->prepare("SELECT * FROM transportadores WHERE id = ?");
     $stmt->execute([$_GET["id"]]);

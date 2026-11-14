@@ -5,10 +5,8 @@ $titulo = "Endereço - Camilo Transportes";
 
 $estados = ["AC","AL","AP","AM","BA","CE","DF","ES","GO","MA","MT","MS","MG","PA","PB","PR","PE","PI","RJ","RN","RS","RO","RR","SC","SP","SE","TO"];
 
-// Valores vazios, para quando for um endereço novo
 $e = ["id" => "", "rua" => "", "numero" => "", "complemento" => "", "bairro" => "", "cidade" => "", "estado" => "", "cep" => ""];
 
-// Se veio um id na URL, busca o endereço para editar
 if (isset($_GET["id"])) {
     $stmt = $pdo->prepare("SELECT * FROM enderecos WHERE id = ?");
     $stmt->execute([$_GET["id"]]);

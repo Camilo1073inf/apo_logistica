@@ -3,10 +3,8 @@ require "../config/conexao.php";
 $pagina = "produtos";
 $titulo = "Produto - Camilo Transportes";
 
-// Valores vazios, para quando for um produto novo
 $p = ["id" => "", "nome" => "", "peso" => "", "medidas" => "", "quantidade" => 1, "valor" => ""];
 
-// Se veio um id na URL, busca o produto para editar
 if (isset($_GET["id"])) {
     $stmt = $pdo->prepare("SELECT * FROM produtos WHERE id = ?");
     $stmt->execute([$_GET["id"]]);
