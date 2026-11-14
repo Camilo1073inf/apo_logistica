@@ -2,3 +2,9 @@
 .navbar .nav-link { color: #fff; font-size: 18px; border-radius: 6px; margin-left: 4px; }
 .navbar .nav-link.active { background: #fff; color: #c40000; font-weight: 700; }
 body { background-color: #f3f3f3; }
+.hero {
+  min-height: calc(100vh - 56px);
+  background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.45)), url("../caminhao.jpg") center/cover no-repeat;
+  color: #fff;
+  padding: 40px 0;
+}
