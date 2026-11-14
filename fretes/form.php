@@ -34,21 +34,21 @@ require "../includes/header.php";
           <?php endforeach; ?>
         </select>
       </div>
-      <div class="col-md-6">
+            <div class="col-md-6">
         <label class="form-label">Origem</label>
         <select name="origem_id" id="origem" class="form-select" required>
           <option value="">Selecione o endereço de origem</option>
           <?php foreach ($enderecos as $e): ?>
-            <option value="<?= $e["id"] ?>"><?= htmlspecialchars($e["rua"] . ", " . $e["numero"] . " - " . $e["cidade"] . "/" . $e["estado"]) ?></option>
+            <option value="<?= $e["id"] ?>" <?= (($_GET["origem"] ?? "") == $e["id"]) ? "selected" : "" ?>><?= htmlspecialchars($e["rua"] . ", " . $e["numero"] . " - " . $e["cidade"] . "/" . $e["estado"]) ?></option>
           <?php endforeach; ?>
         </select>
       </div>
-      <div class="col-md-6">
+            <div class="col-md-6">
         <label class="form-label">Destino</label>
         <select name="destino_id" id="destino" class="form-select" required>
           <option value="">Selecione o endereço de destino</option>
           <?php foreach ($enderecos as $e): ?>
-            <option value="<?= $e["id"] ?>"><?= htmlspecialchars($e["rua"] . ", " . $e["numero"] . " - " . $e["cidade"] . "/" . $e["estado"]) ?></option>
+            <option value="<?= $e["id"] ?>" <?= (($_GET["destino"] ?? "") == $e["id"]) ? "selected" : "" ?>><?= htmlspecialchars($e["rua"] . ", " . $e["numero"] . " - " . $e["cidade"] . "/" . $e["estado"]) ?></option>
           <?php endforeach; ?>
         </select>
       </div>
